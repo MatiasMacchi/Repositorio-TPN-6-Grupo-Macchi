@@ -1,0 +1,11 @@
+SELECT city.city
+FROM city
+WHERE city.city_id = (
+    SELECT address.city_id
+    FROM address
+    JOIN customer ON address.address_id = customer.address_id
+    JOIN rental ON customer.customer_id = rental.customer_id
+    GROUP BY address.city_id
+    ORDER BY COUNT(rental.rental_id) DESC
+    LIMIT 1
+);
