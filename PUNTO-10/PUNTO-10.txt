@@ -1,0 +1,12 @@
+PUNTO 10
+
+SELECT address.address
+FROM customer
+JOIN address ON customer.address_id = address.address_id
+WHERE customer.customer_id = (
+    SELECT payment.customer_id
+    FROM payment
+    GROUP BY payment.customer_id
+    ORDER BY COUNT(payment.payment_id) DESC
+    LIMIT 1
+);

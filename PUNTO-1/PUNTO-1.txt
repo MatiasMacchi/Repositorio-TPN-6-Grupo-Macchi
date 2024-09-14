@@ -1,0 +1,6 @@
+PUNTO 1
+SELECT title
+ FROM film 
+WHERE release_year = (
+  SELECT MAX(release_year) 
+FROM film );
