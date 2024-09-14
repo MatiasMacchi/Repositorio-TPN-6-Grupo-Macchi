@@ -1,2 +1,5 @@
-# Repositorio-TPN-6-Grupo-Macchi
-Trabajo Practico numero 6
+Integrantes:
+Macchi Matias
+Luciano Rioja
+Facundo Esquibel
+Pedro Aramayo
